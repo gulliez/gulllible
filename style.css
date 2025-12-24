@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html,
@@ -44,16 +45,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  user-select: none;
 }
 
-.profile img {
+.pictures img{
+  position: relative;
   width: clamp(120px, 40vw, 200px);
   height: clamp(120px, 40vw, 200px);
-  border-radius: 50%;
+  border-radius: 70%;
   border: 6px solid #66b5ff;
 }
+.pictures #peak-rank img{
+  position: absolute;
+  width: clamp(60px, 20vw, 80px);
+  height: clamp(60px, 20vw,80px);
+  z-index: 69;
+ transform: translate(-94%, 160%) ;
+ border: none;
 
+ 
+}
 .profile #name {
   margin-top: 20px;
   font-size: clamp(24px, 6vw, 36px);
